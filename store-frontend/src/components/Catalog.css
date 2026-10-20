@@ -1,0 +1,110 @@
+
+
+/* Основная структура каталога */
+.catalog-layout {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 30px;
+    align-items: start;
+
+}
+
+/* Заголовок  над всем каталогом */
+.catalog-title {
+    grid-column: 1 / -1;
+    margin: 0;
+    text-align: center;
+    font-size: 28px;
+    color: #222;
+}
+
+/* Левая колонка — категории */
+.catalog-sidebar {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Правая часть каталога */
+.catalog-content {
+    min-width: 0;
+}
+
+.catalog-content > h2 {
+    margin: 0 0 25px;
+    text-align: center;
+    font-size: 28px;
+    color: #222;
+}
+
+/* Адаптация под планшет */
+@media (max-width: 900px) {
+
+    .catalog-layout {
+        grid-template-columns: 180px 1fr;
+        gap: 20px;
+    }
+
+}
+
+/* Телефон */
+@media (max-width: 600px) {
+
+    .catalog-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .catalog-sidebar {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 10px;
+    }
+
+}
+
+
+/*Сетка каталога товаров  - .catalog-products отвечает за сетку карточек товаров внутри каталога.*/
+.catalog-products {
+    max-width: 1200px;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.catalog-products > h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+
+/* Телефон: две карточки в ряд, как в «Рекомендуємо» */
+@media (max-width: 600px) {
+    .catalog-products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        padding: 0 10px; /*отступ по краях карточек*/
+    }
+
+    .catalog-products > * {
+        min-width: 0;
+    }
+}
+
+/* Телефон: поднимаем чуток заголовок Каталог товаров */
+@media (max-width: 600px) {
+    .catalog-content > h2 {
+        transform: translateY(-10px);
+    }
+}

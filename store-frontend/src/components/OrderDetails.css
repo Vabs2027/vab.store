@@ -1,0 +1,119 @@
+/* карточка товара */
+.order-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+/*фото товара в карточке*/
+.order-item img {
+    width: 120px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/*описание товара в карточке*/
+.order-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+
+    transform: translateY(-5px);
+}
+
+.order-item-info h3,
+.order-item-info p {
+    margin: 0;
+}
+
+/*название товара*/
+.order-item-title {
+    margin: 0 0 6px 0 !important;
+    transform: translateY(-3px);
+}
+
+/* вся страница деталей заказа */
+.order-details {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/*заголовок*/
+.order-details-title {
+    text-align: center;
+    margin: 0 0 8px;
+}
+
+/*№ заказа*/
+.order-details-number {
+    text-align: center;
+    margin: 0 0 25px;
+}
+
+/*для моб версии*/
+@media (max-width: 600px) {
+
+    .order-details {
+        margin: 25px auto;
+        padding: 0 12px;
+    }
+
+    .order-details-title {
+        font-size: 24px;
+    }
+
+    .order-details-number {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .order-item {
+        max-width: 100%;
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .order-item img {
+        width: 90px;
+        height: 120px;
+    }
+
+    .order-item-info {
+        gap: 1px;
+    }
+
+    .order-item-title {
+        font-size: 17px;
+    }
+
+    .order-item-info p {
+        font-size: 14px;
+    }
+}
+
+/*описание к товару*/
+.product-description {
+    margin-top: 8px;
+    padding: 2px 12px 12px;
+
+    background: #f8f8f8;
+    border-radius: 8px;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.product-description p {
+    margin: 0;
+    white-space: pre-line;
+}

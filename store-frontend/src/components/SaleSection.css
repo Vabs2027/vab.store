@@ -1,0 +1,49 @@
+
+.sale-section {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    padding: 25px;
+    margin-bottom: 25px;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/*наводка на Акции - увелечение немного*/
+.sale-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: inherit;
+
+    transition: transform 0.2s ease;
+}
+
+.sale-link:hover {
+    transform: scale(1.03);
+}
+
+.sale-title {
+    margin: 0 0 10px;
+
+    font-size: 30px;
+    color: #222;
+    text-align: center;
+}
+
+.sale-text {
+    margin: 0;
+
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+}

@@ -1,0 +1,120 @@
+/*расположение карточки на стр Black Friday*/
+.black-friday-products {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    max-width: 1200px;
+    margin: 24px auto;
+    padding: 0 16px;
+}
+
+/* Блок Black Friday на главной , банер*/
+.home-black-friday {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    margin-top: 24px;
+    padding: 30px;
+
+    background-image:/*подключаем фон к блоку и картинку на фон этого блока*/
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.25)
+        ),
+        var(--black-friday-image);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+    border-radius: 14px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.home-black-friday-text span {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #d6c19a;
+}
+
+.home-black-friday h2 {
+    margin: 6px 0;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.home-black-friday p {
+    margin: 0;
+    color: #eeeeee;
+    font-size: 14px;
+
+}
+
+
+/* Заголовок и описание страницы Black Friday */
+.black-friday {
+    text-align: center; /*по центру стр*/
+}
+
+.home-black-friday-btn {
+    flex-shrink: 0;
+    padding: 12px 18px;
+
+    background: #ffffff;
+    color: #222222;
+
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: background 0.2s ease;
+}
+
+.home-black-friday-btn:hover {
+    background: #e8e8e8;
+}
+
+/* Компактный блок на телефонах */
+@media (max-width: 600px) {
+    .home-black-friday {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+
+        margin-top: 16px;
+        padding: 20px 16px;
+    }
+
+
+    /* Заголовок и описание страницы Black Friday */
+    .black-friday {
+        text-align: center;
+    }
+
+
+    .home-black-friday h2 {
+        font-size: 25px;
+    }
+
+    .home-black-friday-btn {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
+
+/* Мобильная версия: 2 карточки в ряд */
+@media (max-width: 600px) {
+    .black-friday-products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));/*две одинаковые по ширине колонки.*/
+        gap: 12px;/*расстояние между карточками.*/
+        padding: 0 12px;/*отступы по краям экрана*/
+    }
+}

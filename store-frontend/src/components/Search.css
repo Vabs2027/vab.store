@@ -1,0 +1,86 @@
+
+/* Блок пошуку */
+.search-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto 25px;
+}
+
+/* Пошук на всю ширину каталога */
+.search-container input {
+    flex: 1;
+    box-sizing: border-box;
+
+    height: 46px;
+    padding: 0 16px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+
+    font-size: 16px;
+    outline: none;
+
+    background: #ffffff;
+
+    transition: 0.25s ease;
+}
+
+/*вид поля во время ввода.*/
+.search-container input:focus {
+    border-color: #2f80ed;
+    box-shadow: 0 0 0 4px rgba(47, 128, 237, 0.12);
+}
+
+/*поиск Лупа в МЕНЮ*/
+.search-btn {
+    background: transparent;
+    color: #222;
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.25s ease;
+}
+
+.search-btn:hover {
+    background: transparent;
+    color: #222;
+    transform: translateY(-2px);
+}
+
+/* Кнопка очищення пошуку */
+.clear-search-btn {
+    flex-shrink: 0;
+
+    height: 46px;
+    padding: 0 18px;
+
+    background: #6c757d;
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.clear-search-btn:hover {
+    background: #495057;
+    transform: translateY(-1px);
+}
+
+/* Убираем нижний отступ у поля поиска,
+   чтобы оно было на одном уровне с кнопкой "Очистити" */
+.search-container input {
+    margin-bottom: 0;
+}

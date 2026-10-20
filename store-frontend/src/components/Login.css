@@ -1,0 +1,125 @@
+
+/*внешняя область страницы входа*/
+.login-page {
+    min-height: 70vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-top: 40px;
+}
+
+/*сама белая карточка с формой*/
+.login-card {
+    width: 100%;
+    max-width: 420px;
+
+    padding: 30px;
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+
+    box-sizing: border-box;
+}
+
+/*кнопка Вход в форме */
+.login-card button {
+    width: 100%;
+    height: 46px;
+
+    margin-top: 5px;
+
+    background: #ffffff;
+    color: #222;
+
+    border: 1px solid #222;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+/*наведение на кнопку*/
+.login-card button:hover {
+    background: #ffffff;
+    color: #222;
+
+    border-color: #28a745;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.18);
+}
+
+/*Вхід название*/
+.login-card h2 {
+    margin: 0 0 25px;
+    text-align: center;
+
+    font-size: 28px;
+    font-weight: 700;
+    color: #222;
+}
+
+/*поля ввода ВХОД*/
+.login-card input {
+    width: 100%;
+    height: 46px;
+
+    box-sizing: border-box;
+    padding: 0 14px;
+    margin-bottom: 15px;
+
+    background: #ffffff;
+    color: #222;
+
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+
+    font-size: 16px;
+    outline: none;
+
+    transition: 0.2s ease;
+}
+/*focus — это состояние элемента, когда пользователь сейчас с ним взаимодействует.*/
+.login-card input:focus {
+    border-color: #222;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+/*кнопка выйти*/
+.logout-btn {
+    background: transparent;
+    color: #222;
+
+    border: none;
+
+    width: auto;
+    height: auto;
+
+    padding: 10px 16px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+
+/*кнопка выйти при наведении*/
+.logout-btn:hover {
+    background: transparent;
+    color: #dc3545;
+
+    border: none;
+    box-shadow: none;
+
+    transform: translateY(-2px);
+}
+
+
+

@@ -1,0 +1,265 @@
+.sale-page {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.sale-page-title {
+    margin: 0 0 10px;
+    text-align: center;
+    font-size: 32px;
+    color: #222;
+}
+
+.sale-page-text {
+    margin: 0 0 30px;
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+}
+
+
+/* Сетка акционных товаров */
+
+.sale-products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* Карточка товара */
+
+.sale-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Фото товара */
+
+.sale-card-image {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* Название товара */
+
+.sale-card-name {
+    margin: 15px 0;
+    font-size: 20px;
+    color: #222;
+}
+
+
+/* Блок с ценами */
+.sale-card-prices {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/* Старая цена */
+
+.sale-old-price {
+    position: relative;
+    color: #222;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.sale-old-price::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 42%;
+    height: 2px;
+    background: #e53935;
+}
+
+
+/* Новая цена */
+
+.sale-new-price {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222;
+}
+
+
+/* Маленькие кнопки размеров */
+
+.sale-size-button {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+
+    background: #ffffff;
+    color: #222;
+
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    margin-right: 8px;
+    margin-bottom: 10px;
+}
+
+.sale-size-button:hover {
+    border-color: #222;
+}
+
+.sale-size-button.selectedSize {
+    background: #222;
+    color: #ffffff;
+    border-color: #222;
+}
+
+
+/* Большая кнопка */
+
+.sale-add-button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px 20px;
+
+    background: #222;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.sale-add-button:hover {
+    background: #000000;
+}
+
+.sale-add-button:disabled {
+    background: #d1d5db;
+    color: #777777;
+    cursor: not-allowed;
+}
+
+/*Сообщение Оберите размер*/
+.sale-size-hint {
+    margin: 4px 0;
+    color: #b45309;
+    font-size: 12px;
+    line-height: 1.3;
+    border-line: red;
+}
+
+/* Маленькие кнопки размеров */
+.sale-size-button {
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    background: #ffffff;
+    color: #222;
+
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    margin-right: 8px;
+    margin-bottom: 10px;
+}
+
+.sale-size-button:hover {
+    border-color: #222;
+}
+
+.sale-size-button.selectedSize {
+    background: #222;
+    color: #ffffff;
+    border-color: #222;
+}
+
+/* Большая кнопка */
+.sale-add-button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px 20px;
+
+    background: #222;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* Эффект при наведении */
+.sale-add-button:hover:not(:disabled) {
+    background-color: #444;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+/* Эффект при нажатии */
+.sale-add-button:active:not(:disabled) {
+    transform: scale(0.97);
+    box-shadow: none;
+}
+
+.sale-add-button:hover {
+    background: #000000;
+}
+
+.sale-add-button:disabled {
+    background: #d1d5db;
+    color: #777777;
+    cursor: not-allowed;
+}
+
+/* Планшет */
+@media (max-width: 900px) {
+    .sale-products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Телефон */
+@media (max-width: 600px) {
+    .sale-page {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    .sale-products {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .sale-card-image {
+        height: 240px;
+    }
+}
+

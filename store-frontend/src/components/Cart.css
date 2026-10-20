@@ -1,0 +1,337 @@
+/* Общий контейнер корзины */
+.Cart {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+
+    font-family: Arial, sans-serif;
+}
+
+/* Заголовок */
+.Cart h1 {
+    margin: 0 0 25px;
+
+    text-align: center;
+
+    font-size: 30px;
+    line-height: 1.2;
+
+    color: #222;
+}
+
+/* Информация о заказе */
+.Cart p {
+    margin: 8px 0;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    color: #555;
+}
+
+/*история заказов*/
+.order-history {
+    margin-top: 40px;
+}
+
+.history-item {
+    padding: 15px 20px;
+    margin-bottom: 15px;
+
+    background: #f8f9fa;
+
+    border-radius: 10px;
+    border: 1px solid #ddd;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+
+.history-item:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 12px rgba(0,0,0,.15);
+
+    transition: .3s;
+}
+
+/* карточка товара внутри корзины */
+.cart-item {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    padding: 20px;
+    margin-top: 20px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+    transition: 0.25s ease;
+}
+
+/* Эффект при наведении , Когда пользователь наведёт курсор,
+карточка станет чуть выше*/
+.cart-item:hover {
+    transform: translateY(-3px); /*при наедение карточка сдвигается чуть выше*/
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* название товара внутри корзины. */
+.cart-item h2 {
+    margin: 10px 0 12px;
+
+    font-size: 22px;
+    line-height: 1.3;
+
+    color: #222;
+}
+
+/* Информация внутри карточки */
+.cart-item p {
+    margin-bottom: 15px;
+}
+
+
+/* Блок с итоговой суммой */
+.cart-total {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #e5e7eb;
+    text-align: right;
+}
+
+.cart-total h2 {
+    margin: 0 0 20px;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #222;
+}
+
+/*ИТОГО цена*/
+.cart-total h2 span {
+    color: #222;
+    font-weight: 700;
+}
+
+
+/*цена внутри карты за ед товара*/
+.price-item {
+    margin: 6px 0;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    color: #555;
+}
+
+/*цена за все к-тво в карте товаров*/
+.price-inside {
+    margin: 6px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+}
+
+/*к-тво в карте самого товара*/
+.item-total {
+    margin: 8px 0;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    color: #222;
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+
+    align-items: center;
+}
+
+
+
+/* Общий стиль кнопок */
+button {
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+/* Кнопки + и - */
+.action-btn {
+    width: 40px;
+    height: 40px;
+
+    margin-right: 0;
+
+    background: #ffffff;
+    color: #333;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+/* Наведение */
+.action-btn:hover {
+    background: #ffffff;
+    color: #2f80ed;
+
+    border-color: #2f80ed;
+
+    box-shadow: 0 4px 10px rgba(47, 128, 237, 0.18);
+}
+
+/* Кнопка удаления */
+.delete-btn {
+    width: 40px;
+    height: 40px;
+
+    margin-left: 4px;
+
+    padding: 0;
+
+    background: #ffffff;
+    color: #555;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+
+    font-size: 18px;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+/* hover Наведение на кнопку */
+.delete-btn:hover {
+    background: #ffffff;
+    color: #dc3545;
+
+    border-color: #dc3545;
+
+    box-shadow: 0 4px 10px rgba(220, 53, 69, 0.18);
+}
+
+/* Кнопка оплаты */
+.pay-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+
+    background: #ffffff;
+    color: #222;
+
+    border: 1px solid #222;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+/*при наведении на оплату*/
+.pay-btn:hover {
+    background: #ffffff;
+    color: #222;
+
+    min-width: 140px;
+    box-sizing: border-box;
+
+    border-color: #28a745;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.18);
+}
+
+/*Кнопка отмены замовл*/
+.cancel-btn {
+    min-width: 140px;
+    box-sizing: border-box;
+
+    margin-top: 20px;
+    padding: 12px 25px;
+
+    background: #ffffff;
+    color: #222;
+
+    border: 1px solid #222;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+/* Общая ширина кнопок */
+.pay-btn,
+.cancel-btn {
+    width: 180px;
+    box-sizing: border-box;
+}
+
+/*при наведении на Скасувати замовлення*/
+.cancel-btn:hover {
+    background-color: #ffffff;
+    color: #222;
+
+    border-color: #dc3545;
+    box-shadow: 0 4px 10px rgba(220, 53, 69, 0.18);
+}
+
+
+.cancel-btn:active {
+    transform: scale(0.97);
+}
+
+/*картинка на товарах в самом заказе*/
+.cart-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px;
+
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+
+/* Количество товара между кнопками + и - */
+.quantity {
+    min-width: 30px;
+
+    text-align: center;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    color: #222;
+}

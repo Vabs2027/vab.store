@@ -1,0 +1,70 @@
+
+/* Основной контейнер страницы Избранное */
+.favorites {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Заголовок страницы */
+.favorites h1 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Сетка карточек избранных товаров */
+.favorites-products {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+/*сердечко-кнопка добавить в Избраное*/
+.favorite-btn {
+    display: flex;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+    margin: 0 0 4px;
+
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+
+    font-size: 32px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+}
+
+.favorite-btn:hover {
+    background: transparent;
+    transform: scale(1.15);
+}
+
+
+/* Планшет */
+@media (max-width: 900px) {
+    .favorites-products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Телефон — позже отдельно отшлифуем */
+@media (max-width: 600px) {
+    .favorites {
+        padding: 12px;
+    }
+
+    .favorites-products {
+        grid-template-columns: 1fr;
+    }
+}
+
