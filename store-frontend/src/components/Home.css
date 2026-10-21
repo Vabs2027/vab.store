@@ -290,3 +290,81 @@
         scroll-snap-align: start;
     }
 }
+
+
+
+/* ===== Бегущая строка доставки ===== */
+
+
+.delivery-banner {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+
+    padding: 10px 0;
+    background-color: #e8dfd2;
+    color: #29241f;
+
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+
+/* Грузовичок и текст */
+.delivery-truck {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: max-content;
+    flex-shrink: 0;
+
+    animation: delivery-marquee 12s linear infinite;
+}
+
+.delivery-truck svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.delivery-truck span {
+    display: inline-block;
+    flex-shrink: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Движение строки */
+@keyframes delivery-marquee {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    .delivery-banner {
+        padding: 8px 0;
+    }
+
+    .delivery-truck {
+        gap: 8px;
+        animation-duration: 10s;
+    }
+
+    .delivery-truck svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .delivery-truck span {
+        font-size: 13px;
+    }
+}
