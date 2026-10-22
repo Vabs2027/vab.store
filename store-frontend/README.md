@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# VAB Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack clothing store web application built with React and Django REST Framework.
 
-## Available Scripts
+## About the Project
 
-In the project directory, you can run:
+VAB Store is a personal project developed to practice full-stack web development, including frontend development, backend logic, and communication between the client and server.
 
-### `npm start`
+## Technologies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Frontend
+- React
+- JavaScript
+- HTML
+- CSS
+- Axios
+- Create React App (`react-scripts`)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend
+- Python
+- Django
+- Django REST Framework
+- SQLite
 
-### `npm test`
+### Tools
+- Git
+- GitHub
+- npm
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+- Product catalog
+- Shopping cart
+- User authentication
+- Favorites
+- Order management
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*The feature list will be updated to reflect the current implementation.*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `store/` — Django backend, `manage.py`, and `requirements.txt`
+- `store-frontend/` — React frontend
+- `.gitignore` — specifies files and folders excluded from Git tracking
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Install Python, Node.js (including npm), and Git before setting up the project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Clone the repository and navigate to the project directory.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Backend Setup
 
-## Learn More
+Open a terminal in the project root and run:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+cd store
+python -m venv venv
+venv\Scripts\activate
+python -m pip install -r requirements.txt
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Configure the environment variables before starting Django. Create the local environment file at `store/vabstore/.env` and set the required `SECRET_KEY`. Do not commit the real `.env` file to Git.
 
-### Code Splitting
+Apply database migrations:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+python manage.py migrate
+```
 
-### Analyzing the Bundle Size
+Start the Django development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+python manage.py runserver
+```
 
-### Making a Progressive Web App
+### Frontend Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Open a separate terminal in the project root and run:
 
-### Advanced Configuration
+```bash
+cd store-frontend
+npm ci
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The frontend uses Create React App (`react-scripts`).
 
-### Deployment
+### Production Build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To create an optimized frontend build, run the following command from the `store-frontend` directory:
 
-### `npm run build` fails to minify
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Project Status
+
+This project is under active development.
